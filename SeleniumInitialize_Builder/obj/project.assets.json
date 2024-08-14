@@ -15,22 +15,6 @@
           }
         }
       },
-      "Selenium.Support/4.17.0": {
-        "type": "package",
-        "dependencies": {
-          "Selenium.WebDriver": "4.17.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/WebDriver.Support.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/WebDriver.Support.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Selenium.WebDriver/4.17.0": {
         "type": "package",
         "dependencies": {
@@ -48,6 +32,12 @@
         },
         "build": {
           "buildTransitive/Selenium.WebDriver.targets": {}
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/127.0.6533.7200": {
+        "type": "package",
+        "build": {
+          "build/Selenium.WebDriver.ChromeDriver.targets": {}
         }
       }
     }
@@ -80,20 +70,6 @@
         "packageIcon.png"
       ]
     },
-    "Selenium.Support/4.17.0": {
-      "sha512": "Ex4FJp8lD3Dsy6bJdey4wehDQrS7mYBln6oL82Ni4adWcfIz0fF7IUfyp8RK/7KkP4hzz2mu30AacvMltTdB7w==",
-      "type": "package",
-      "path": "selenium.support/4.17.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "icon.png",
-        "lib/netstandard2.0/WebDriver.Support.dll",
-        "lib/netstandard2.0/WebDriver.Support.xml",
-        "selenium.support.4.17.0.nupkg.sha512",
-        "selenium.support.nuspec"
-      ]
-    },
     "Selenium.WebDriver/4.17.0": {
       "sha512": "wHwWPvQkgZv+k24pncPZswRdSF4AhF2bFVoF7MrY4Xw122j9L89TNGZUvdjdmscPk2XGpRK1fFQODOKopibQEw==",
       "type": "package",
@@ -113,41 +89,57 @@
         "selenium.webdriver.4.17.0.nupkg.sha512",
         "selenium.webdriver.nuspec"
       ]
+    },
+    "Selenium.WebDriver.ChromeDriver/127.0.6533.7200": {
+      "sha512": "O3YVUtyczi9xFNUi51WyUVQkqIvn87N+/bJe6NEXtSiJCzLXk4t5CI0owDrqoISHOr4HTuiXIqlSnJT3b+Cvjg==",
+      "type": "package",
+      "path": "selenium.webdriver.chromedriver/127.0.6533.7200",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "build/DefinePropertiesChromeDriver.targets",
+        "build/Selenium.WebDriver.ChromeDriver.targets",
+        "driver/linux64/LICENSE.chromedriver",
+        "driver/linux64/chromedriver",
+        "driver/mac64/LICENSE.chromedriver",
+        "driver/mac64/chromedriver",
+        "driver/mac64arm/LICENSE.chromedriver",
+        "driver/mac64arm/chromedriver",
+        "driver/win32/LICENSE.chromedriver",
+        "driver/win32/chromedriver.exe",
+        "nupkg-icon.png",
+        "selenium.webdriver.chromedriver.127.0.6533.7200.nupkg.sha512",
+        "selenium.webdriver.chromedriver.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Selenium.Support >= 4.17.0",
-      "Selenium.WebDriver >= 4.17.0"
+      "Selenium.WebDriver >= 4.17.0",
+      "Selenium.WebDriver.ChromeDriver >= 127.0.6533.7200"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vezen\\.nuget\\packages\\": {},
-    "U:\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/Users/valero/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vezen\\source\\repos\\IWebDriverConfig\\SeleniumInitialize_Builder\\SeleniumInitialize_Builder.csproj",
+      "projectUniqueName": "/Users/valero/Projects/1.-IWebDriverConfig/SeleniumInitialize_Builder/SeleniumInitialize_Builder.csproj",
       "projectName": "SeleniumInitialize_Builder",
-      "projectPath": "C:\\Users\\vezen\\source\\repos\\IWebDriverConfig\\SeleniumInitialize_Builder\\SeleniumInitialize_Builder.csproj",
-      "packagesPath": "C:\\Users\\vezen\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vezen\\source\\repos\\IWebDriverConfig\\SeleniumInitialize_Builder\\obj\\",
+      "projectPath": "/Users/valero/Projects/1.-IWebDriverConfig/SeleniumInitialize_Builder/SeleniumInitialize_Builder.csproj",
+      "packagesPath": "/Users/valero/.nuget/packages/",
+      "outputPath": "/Users/valero/Projects/1.-IWebDriverConfig/SeleniumInitialize_Builder/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "U:\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\vezen\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/valero/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -166,13 +158,13 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
-          "Selenium.Support": {
-            "target": "Package",
-            "version": "[4.17.0, )"
-          },
           "Selenium.WebDriver": {
             "target": "Package",
             "version": "[4.17.0, )"
+          },
+          "Selenium.WebDriver.ChromeDriver": {
+            "target": "Package",
+            "version": "[127.0.6533.7200, )"
           }
         },
         "imports": [
@@ -191,7 +183,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
       }
     }
   }

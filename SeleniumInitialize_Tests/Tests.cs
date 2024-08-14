@@ -1,6 +1,7 @@
 using OpenQA.Selenium;
 using SeleniumInitialize_Builder;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 namespace SeleniumInitialize_Tests
 {
@@ -12,15 +13,20 @@ namespace SeleniumInitialize_Tests
         {
             _builder = new SeleniumBuilder();
         }
+        [TearDown]
+        public void TearDown()
+        {
+            _builder.Dispose();
+        }
 
-        [Test(Description = "Проверка корректной инициализации экземпляра IWebDriver")]
+        [Test(Description = "BuildTest1")]
         public void BuildTest1()
         {
             IWebDriver driver = _builder.Build();
             Assert.IsNotNull(driver);
         }
 
-        [Test(Description = "Проверка очистки ресурсов IWebDriver")]
+        [Test(Description = "DisposeTest1")]
         public void DisposeTest1()
         {
             IWebDriver driver = _builder.Build();
@@ -31,14 +37,16 @@ namespace SeleniumInitialize_Tests
             Assert.IsFalse(processes.Any());
         }
 
-        [Test(Description = "Проверка смены порта драйвера")]
+       
+
+        [Test(Description = "PortTest1")]
         public void PortTest1()
         {
             IWebDriver driver = _builder.ChangePort(3737).Build();
             Assert.That(_builder.Port, Is.EqualTo(3737));
         }
 
-        [Test(Description = "Проверка смены порта на случайный")]
+        [Test(Description = "PortTest2")]
         public void PortTest2()
         {
             int port = new Random().Next(6000, 32000);
@@ -46,7 +54,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(_builder.Port, Is.EqualTo(port));
         }
 
-        [Test(Description = "Проверка добавления аргумента")]
+        [Test(Description = "ArgumentTest1")]
         public void ArgumentTest1()
         {
             string argument = "--start-maximized";
@@ -57,7 +65,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(driver.Manage().Window.Size, Is.EqualTo(startingSize));
         }
 
-        [Test(Description = "Добавление пользовательской настройки")]
+        [Test(Description = "UserOptionTest")]
         public void UserOptionTest()
         {
             string key = "safebrowsing.enabled";
@@ -66,7 +74,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(_builder.ChangedUserOptions[key], Is.True);
         }
 
-        [Test(Description = "Стресстест добавления пользовательской настройки")]
+        [Test(Description = "UserOptionStressTest")]
         public void UserOptionStressTest()
         {
             string key = "safebrowsing.enabled";
@@ -77,7 +85,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(_builder.ChangedUserOptions[key], Is.True);
         }
 
-        [Test(Description = "Проверка изменения таймаута")]
+        [Test(Description = "TimeoutTest")]
         public void TimeoutTest()
         {
             TimeSpan timeout = TimeSpan.FromSeconds(20);
@@ -86,7 +94,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(_builder.Timeout, Is.EqualTo(timeout));
         }
 
-        [Test(Description = "Проверка изменения URL")]
+        [Test(Description = "URLTest")]
         public void URLTest()
         {
             string url = @"https://ib.psbank.ru/store/products/your-cashback-new";
@@ -95,7 +103,7 @@ namespace SeleniumInitialize_Tests
             Assert.That(_builder.StartingURL, Is.EqualTo(url));
         }
 
-        [Test(Description = "Комплексная проверка")]
+        [Test(Description = "ComplexTest")]
         public void ComplexTest()
         {
             string url = @"https://ib.psbank.ru/store/products/your-cashback-new";
