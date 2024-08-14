@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SeleniumInitialize_Tests
-build_property.ProjectDir = C:\Users\vezen\source\repos\IWebDriverConfig\SeleniumInitialize_Tests\
+build_property.ProjectDir = /Users/valero/Projects/1.-IWebDriverConfig/SeleniumInitialize_Tests/

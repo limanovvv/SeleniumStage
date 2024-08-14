@@ -1,0 +1,66 @@
+﻿<Properties StartupConfiguration="{A4D10FA2-7635-4871-A5E5-F1FD30A64115}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.SeleniumInitialize__Tests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebElements_Tests/Tests/UnitTest1.cs">
+    <Files>
+      <File FileName="WebElements_Tests/Tests/WorkingWithDifferentBrowserTabs.feature" />
+      <File FileName="WebElements_Tests/Tests/SpecflowTests.feature" />
+      <File FileName="WebElements_Tests/Tests/FillFormAndVerifyEnteredData.feature.cs" />
+      <File FileName="WebElements_Tests/Tests/SpecflowTests.feature.cs" />
+      <File FileName="WebElements_Tests/StepsForVerification/NavigationStep.cs" />
+      <File FileName="WebElements_Tests/Tests/VerificationMortgageForm.feature.cs" />
+      <File FileName="WebElements_Tests/StepsForVerification/VerificationStep.cs" />
+      <File FileName="WebElements_Tests/StepsForFillFormAndVerifyEnteredData/FillFormStep.cs" />
+      <File FileName="WebElements_Tests/StepsForFillFormAndVerifyEnteredData/VerifyDataStep.cs" />
+      <File FileName="WebElements_Tests/Tests/WorkingWithDifferentBrowserTabs.feature.cs" />
+      <File FileName="WebElements_Tests/Tests/UnitTest1.cs" Line="433" Column="49" />
+      <File FileName="WebElements_Tests/Tests/Calculator.cs" Line="130" Column="1" />
+      <File FileName="WebElements_Tests/Pages/BaseApplicationPage.cs" Line="1" Column="1" />
+      <File FileName="WebElements_Tests/Pages/ApplicationData.cs" Line="10" Column="48" />
+      <File FileName="WebElements_Tests/Tests/PageObjectTests.cs" Line="23" Column="13" />
+      <File FileName="WebElements_Tests/Tests/CheckUniqueElementOnPage.feature" />
+      <File FileName="WebElements_Tests/Tests/FillFormAndVerifyEnteredData.feature" />
+      <File FileName="WebElements_Tests/StepsForTaskNumberFive/BaseStep.cs" />
+      <File FileName="WebElements_Tests/StepsForTaskNumberFive/AcquisitionTabStep.cs" />
+      <File FileName="WebElements_Tests/Hooks.cs" />
+      <File FileName="WebElements_Tests/StepsForTaskNumberFive/MortgagePageStep.cs" />
+      <File FileName="WebElements_Tests/Tests/VerificationMortgageForm.feature" />
+      <File FileName="WebElements_Tests/Tests/NavigationToTests.cs" />
+      <File FileName="SeleniumInitialize_Builder/SeleniumBuilder.cs" />
+      <File FileName="WebElements_Tests/StepsForWindow/ButtonStep.cs" />
+      <File FileName="WebElements_Tests/StepsForWindow/NavigationStep.cs" />
+      <File FileName="WebElements_Tests/StepsForWindow/VerificationStep.cs" />
+      <File FileName="SeleniumInitialize_Tests/Tests.cs" />
+      <File FileName="WebElements_Tests/Pages/DebitCardYourCashbackPageNew.cs" Line="1" Column="1" />
+      <File FileName="WebElements_Tests/FieldsGenerator.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="IWebDriver_Practice" expanded="True">
+            <Node name="Элементы решения" expanded="True" />
+            <Node name="SeleniumInitialize_Builder" expanded="True" />
+            <Node name="SeleniumInitialize_Tests" expanded="True" />
+            <Node name="WebElements_Tests" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="StepsForWindow" expanded="True" />
+              <Node name="Tests" expanded="True">
+                <Node name="UnitTest1.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="IWebDriver_Practice" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
